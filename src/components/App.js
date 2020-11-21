@@ -6,15 +6,11 @@ import Slide from "./slide";
 const App = () => {
   const [slideNo, setSlideNo] = React.useState(0);
   const previousSlide = () => {
-    if (slideNo > 0) {
-      setSlideNo(slideNo - 1);
-    }
+    setSlideNo(slideNo - 1);
   };
 
   const nextSlide = () => {
-    if (slideNo < slides.length - 1) {
-      setSlideNo(slideNo + 1);
-    }
+    setSlideNo(slideNo + 1);
   };
 
   const restartSlides = () => {
