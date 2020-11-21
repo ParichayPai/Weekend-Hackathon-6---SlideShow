@@ -20,6 +20,13 @@ const App = () => {
   return (
     <>
       <button
+        data-testid="button-restart"
+        onClick={() => restartSlides()}
+        disabled={slideNo === 0}
+      >
+        Restart
+      </button>
+      <button
         data-testid="button-prev"
         onClick={() => previousSlide()}
         disabled={slideNo === 0}
@@ -32,13 +39,6 @@ const App = () => {
         disabled={slideNo === 4}
       >
         Next
-      </button>
-      <button
-        data-testid="button-restart"
-        onClick={() => restartSlides()}
-        disabled={slideNo === 0}
-      >
-        Restart
       </button>
       <Slide title={slides[slideNo].title} text={slides[slideNo].text} />
     </>
