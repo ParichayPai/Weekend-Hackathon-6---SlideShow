@@ -5,10 +5,6 @@ import Slide from "./slide";
 
 const App = () => {
   const [slideNo, setSlideNo] = React.useState(0);
-
-  if (slideNo === 0) {
-  }
-
   const previousSlide = () => {
     if (slideNo > 0) {
       setSlideNo(slideNo - 1);
