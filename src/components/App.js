@@ -1,9 +1,8 @@
 import React, { Component, useState } from "react";
 import "../styles/App.css";
-import slides from "../data";
 import Slide from "./slide";
 
-const App = () => {
+const App = (props) => {
   const [slideNo, setSlideNo] = React.useState(0);
   const previousSlide = () => {
     setSlideNo(slideNo - 1);
@@ -40,7 +39,10 @@ const App = () => {
       >
         Next
       </button>
-      <Slide title={slides[slideNo].title} text={slides[slideNo].text} />
+      <Slide
+        title={props.slides[slideNo].title}
+        text={props.slides[slideNo].text}
+      />
     </>
   );
 };
